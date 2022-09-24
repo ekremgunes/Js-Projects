@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Freehand&display=swap');
+
+#load {
+    position: relative;
+    margin-bottom: 8vh;
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+    border-bottom: 1px solid white;
+    font-family: 'Freehand', cursive;
+}
+
+#load-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.clearLoad {
+    animation: clearLoad 700ms ease-out;
+}
+
+@keyframes clearLoad {
+    0% {
+        
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

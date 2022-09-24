@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- link css -->
+    <link rel="stylesheet" href="style.css">
+    <title>Loading Page by gunesekrem</title>
+    <style>
+        body {
+            background: rgb(15, 12, 55);
+            background: linear-gradient(95deg, rgba(15, 12, 55, 1) 26%, rgba(65, 44, 6, 0.9976365546218487) 78%);
+            margin-top: 45vh;
+            text-align: center;
+            color: white;
+        }
+
+        #me {
+            text-decoration: none;
+            color: rgb(250, 250, 250);
+            border-left: 1px solid white;
+            padding-left: .45rem;
+            text-decoration: none;
+            transition: .6s;
+
+        }
+        #me:hover{
+            transform: scale(1.2x) rotateY(30deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="load-overlay">
+        <div id="load"></div>
+    </div>
+
+    <div>
+        <h1>Created by <a id="me" href="http://gunesekrem.com/">Ekrem Güneş</a></h1>
+    </div>
+
+
+    <!-- scripts -->
+    <script src="script.js"></script>
+    <!-- link typing -->
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script>
+        var load = document.getElementById('load');
+
+        var customNodeCreator = function (character) {
+            return document.createTextNode(character);
+        }
+
+        var typewriter = new Typewriter(load, {
+
+            loop: false,
+            delay: 45,
+            onCreateTextNode: customNodeCreator,
+        });
+
+        typewriter
+            // .typeString('loading ')//u can type here           
+            // .pauseFor(400)
+            // .deleteAll()
+            .typeString('gunesekrem.com ')//here too            
+            // .pauseFor(400)
+            .start();
+
+
+        // my settings
+        setTimeout(() => {
+            typewriter
+                .deleteAll()
+                .stop();
+        }, 1650);
+
+
+
+    </script>
+</body>
+
+</html>
