@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player {
+    padding: 1rem;
+    margin: 1rem;
+
+}
+
+.player-1 {
+    padding: .6rem;
+    border-radius: 1rem;
+    background: rgb(252, 0, 0);
+    background: radial-gradient(circle, rgba(252, 0, 0, 1) 0%, rgba(255, 100, 0, 1) 52%, rgba(255, 0, 0, 1) 100%);
+    font-weight: bolder;
+    font-size: large;
+}
+
+.player-2 {
+    padding: .6rem;
+    border-radius: 1rem;
+    font-size: large;
+    font-weight: bolder;
+    background: rgb(53, 255, 234);
+    background: radial-gradient(circle, rgba(53, 255, 234, 1) 0%, rgba(0, 28, 255, 1) 52%, rgba(71, 244, 250, 1) 100%);
+}
+
+#bar {
+    border-radius: .3rem;
+    width: 320px;
+    height: 2rem;
+    background-color: rgb(155, 155, 155);
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.bar-1 {
+    --player1: 160px;
+    height: 2rem;
+    width: var(--player1);
+    border-radius: .3rem;
+    background: rgb(252, 0, 0);
+    background: radial-gradient(circle, rgba(252, 0, 0, 1) 0%, rgba(255, 100, 0, 1) 52%, rgba(255, 0, 0, 1) 100%);
+    transition: .2s;
+}
+
+.bar-2 {
+    --player2: 160px;
+    height: 2rem;
+    width: var(--player2);
+    border-radius: .3rem;
+    transition: .2s;
+    background: rgb(53, 255, 234);
+    background: radial-gradient(circle, rgba(53, 255, 234, 1) 0%, rgba(0, 28, 255, 1) 52%, rgba(71, 244, 250, 1) 100%);
+
+}
+
+
+
+.info {
+    position: absolute;
+    margin-top: 10rem;
+    text-align: center;
+    color: white;
+}
+
+.btn {
+    transition: .5s;
+    border-radius: 1rem;
+    background-color: gold;
+    border: 2px solid black;
+    font-size: large;
+    padding: .4rem 1.5rem .4rem 1.5rem;
+    margin: .6rem;
+}
+
+.btn:hover {
+    border: 2px solid white;
+}
+
+.btn-start {
+    display: inline-block;
+}
+
+.sound-div {
+    visibility: hidden;
+}
