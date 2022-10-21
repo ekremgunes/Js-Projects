@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.column-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#piano-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.note-header{
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    box-shadow: 2px 2px 4px solid black;
+}
+#black-keys {
+    
+    position: absolute;
+    margin-bottom: 4.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 29vw; /*we have 10 white key 10*3 ~ 28 */
+}
+.black {
+    
+    border-bottom: 3.3px solid rgb(60, 60, 60);
+    border-right: 2.2px solid rgb(60, 60, 60);
+    border-radius: .4rem;
+    width: 2.6vw;
+    height: 21vh;
+    background-color: black;
+}
+
+.light {
+    transition: .2s;
+    border-radius: .5rem;
+    border: 2px solid black;
+    width: 3vw;
+    height: 33vh;
+    background-color: white;
+    box-shadow: inset -3px -2px 3px grey;
+}
+.light-note{
+    list-style: none;
+    margin-top: 26vh;
+    font-size: large;
+    text-align: center;
+    font-weight: bold;
+}
+.active-note{
+    background-color: rgb(178, 178, 178);
+
+}
+
+#piano_img{
+    z-index: -1;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    filter: blur(8);
+    opacity: .16;
+}
