@@ -1,5 +1,5 @@
 
-var LoadOverlay = document.querySelector("#load-overlay");
+var LoadOverlay = document.querySelector("#load-overlay")
 
 setTimeout( () => {
 
