@@ -31,13 +31,13 @@
 
         async function getUsers() {
             try {
-                const UserResponse = await fetch('https://randomuser.me/api/?results=10');//random users from api
+                const UserResponse = await fetch('https://randomuser.me/api/?results=10')//random users from api
 
                 if (UserResponse.ok)//status is  checking (200)... 
                 {
-                    const usersJson = await UserResponse.json();
+                    const usersJson = await UserResponse.json()
 
-                    const cardSection = document.getElementById('users');
+                    const cardSection = document.getElementById('users')
                     usersJson.results.forEach(user => {
                         
                         cardSection.innerHTML +=
@@ -52,10 +52,10 @@
                                 
                             </div>
                              `;
-                    });
+                    })
 
                 } else {
-                    throw new Error(":( Something went wrong");
+                    throw new Error(":( Something went wrong")
                 }
 
 
@@ -63,21 +63,18 @@
 
                 setTimeout(function () {
                     if (err.message == ":( Something went wrong") {
-                        alert(err.message + ". Page is closing by us ...");
-                        close();
+                        alert(err.message + ". Page is closing by us ...")
+                        close()
                     }
                     else {
-                        alert(err.message);
+                        alert(err.message)
                     }
 
 
-                }, 1500);
-
+                }, 1500)
             }
         }
         
-       
-
     </script>
 </body>
 
