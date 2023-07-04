@@ -1,2 +1,2 @@
 # Js-Projects
-Some JavaScript Projects,trainings,apps
+Some JavaScript Projects,trainings,app
